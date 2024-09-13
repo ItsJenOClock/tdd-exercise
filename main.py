@@ -4,7 +4,7 @@ def blackjack_score(hand):
     score = 0
     number_of_aces = 0
 
-    if len(hand) > 5 or len(hand) < 2: #  A hand, an array of Card values, must be between 2 and 5 items inclusive
+    if len(hand) > 5 or len(hand) < 2:
         return "Invalid"
 
     for card in hand:
@@ -20,9 +20,9 @@ def blackjack_score(hand):
 
     for ace in range(number_of_aces):
         if score > 21:
-            score -= 10 # subtract 10, so that Ace only counts for 1
+            score -= 10 # subtract 10, so that the ace only counts for 1
             
     if score > 21:
         return "Bust"
-    
+        
     return score
